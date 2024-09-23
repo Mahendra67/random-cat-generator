@@ -13,10 +13,8 @@ async function getCat(){
 
     const catJSON = await catData.json();
 
-    var catURLsuffix = catJSON.url;
-    var catURL = 'https://cataas.com' + catURLsuffix;
-
-    // console.log(catURL)
+    var catURLsuffix = catJSON._id;
+    var catURL = 'https://cataas.com/cat/gif?' + catURLsuffix;
 
     catFrame.setAttribute('src', catURL);
 }
@@ -26,10 +24,8 @@ async function getCatNG(){
 
     const catJSON = await catData.json();
 
-    var catURLsuffix = catJSON.url;
-    var catURL = 'https://cataas.com' + catURLsuffix;
-
-    // console.log(catURL)
+    var catURLsuffix = catJSON._id;
+    var catURL = 'https://cataas.com/cat?' + catURLsuffix;
 
     catFrame.setAttribute('src', catURL);
 }
